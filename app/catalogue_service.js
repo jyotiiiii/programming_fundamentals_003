@@ -123,6 +123,7 @@ function getBooksByAuthor(author) {
 //   }
 // }
 
+//This is the function that took forever to figure out - Make note of how the validation loop works
 function checkQuantity(title, quantity) {
   for (i = 0; i < catalogue.length; i++) {
     if (catalogue[i].title.toUpperCase() === title.toUpperCase() && catalogue[i].quantity >= quantity) {
