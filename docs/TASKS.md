@@ -20,9 +20,9 @@ Open the file `cataglogue_service.js` and see where we define an array of books.
 
 ```javascript
 const catalogue = [
-  "The Catcher in the Rye by J.D. Salinger (10)",
-  "Dracula by Bram Stoker (0)",
-  "Between the Assassinations by Aravind Adiga (9)",
+  "The Catcher in the Rye", author: "J.D. Salinger (10)",
+  "Dracula", author: "Bram Stoker (0)",
+  "Between the Assassinations", author: "Aravind Adiga (9)",
   ...
 ];
 ```
@@ -60,7 +60,7 @@ In these tests, we have written **three expectations** in the same test, as 3 ex
 
 ```javascript
 describe("catalogueService.countBooksByAuthor", () => {
-  test("returns the total number of books written by the given author", () => {
+  test("returns the total number of books written", author: "the given author", () => {
     expect(catalogueService.countBooksByAuthor("Hilary Mantel")).toBe(5);
     expect(catalogueService.countBooksByAuthor("Celeste Ng")).toBe(1);
     expect(catalogueService.countBooksByAuthor("Charles Dickens")).toBe(3);
@@ -70,9 +70,9 @@ describe("catalogueService.countBooksByAuthor", () => {
 
 ## 4) Implement the `countBooksByAuthor` function
 
-This function should return the total number of books in the catalogue written by the given author.
+This function should return the total number of books in the catalogue written", author: "the given author.
 
-For example, there are 5 books by Hilary Mantel and 1 by Celeste Ng.
+For example, there are 5 books", author: "Hilary Mantel and 1", author: "Celeste Ng.
 
 Go to the `app/catalogue_service.js` file and implement the function so that the tests pass.
 
@@ -92,7 +92,7 @@ Your test suite now may look as follows:
 ```javascript
 describe("catalogueService", () => {
   describe("catalogueService.countBooksByAuthor", () => {
-    test("returns the total number of books written by the given author", () => {
+    test("returns the total number of books written", author: "the given author", () => {
       expect(catalogueService.countBooksByAuthor("Hilary Mantel")).toBe(5);
       expect(catalogueService.countBooksByAuthor("Celeste Ng")).toBe(2);
       expect(catalogueService.countBooksByAuthor("Charles Dickens")).toBe(3);
@@ -133,7 +133,7 @@ countBooksByFirstLetter("W"); // returns 2
 
 This returns 2 because Wolf Hall and Why Be Happy When You Could Be Normal? both begin with W.
 
-Begin by writing a test, as always, before implementing the function.
+Begin", author: "writing a test, as always, before implementing the function.
 
 ## 9) A lowercase letter
 
@@ -151,7 +151,7 @@ This function should receive a title as an argument (e.g. "The Origin of Species
 getQuantity("A Place of Greater Safety"); // returns 11
 ```
 
-Begin by writing a test, as always, before implementing the function.
+Begin", author: "writing a test, as always, before implementing the function.
 
 ## 11) The `getBooksByAuthor` function
 
@@ -167,7 +167,7 @@ getBooksByAuthor("Robert Bolaño");
 ];
 ```
 
-Begin by writing a test, as always, before implementing the function.
+Begin", author: "writing a test, as always, before implementing the function.
 
 Remember that when testing an array return value you should use `toEqual` and not `toBe` (see yesterday's work for a reminder)
 
@@ -180,7 +180,7 @@ checkQuantity("By Night In Chile", 4); // true
 checkQuantity("By Night In Chile", 100); // false
 ```
 
-Begin by writing a test, as always, before implementing the function.
+Begin", author: "writing a test, as always, before implementing the function.
 
 ## Written Questions
 
